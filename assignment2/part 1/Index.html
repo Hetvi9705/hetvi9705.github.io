@@ -1,0 +1,91 @@
+<!--
+Name: Hetvi Patel
+file: Assignment2.hmtl
+date: 4 October,2024
+This HTML file showcases a Mozilla-themed page with a header, embedded video, responsive images, and a section about the red panda.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozilla Splash Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+
+</head>
+<body>
+
+ <!-- Header section with logo -->
+ <header>
+    <h1>Welcome to Mozilla</h1>
+    <img src="firefox_logo-only_RGB120.png" alt="Firefox Logo" width="120">
+</header>
+
+<!-- Main content with embedded video -->
+<article>
+    <h2>What is Mozilla?</h2>
+    <p>Mozilla stands for a better, open web. Here's more about what we do:</p>
+
+<!-- Embedding YouTube Video -->
+<iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</article>
+
+<!-- Responsive Images for further information links -->
+<section class="further-info">
+    <h3>Further Information</h3>
+
+<!-- Image 1 with responsive srcset -->
+    <a href="https://www.mozilla.org/en-US/">
+        <img src="firefox_logo-only_RGB.png" alt="firefox_logo-only_RGB"
+             srcset="firefox_logo-only_RGB.png 120w, firefox_logo-only_RGB400.png 400w" 
+            sizes=" 120px, 400px"> 
+    </a>
+
+<!-- Image 2 with responsive srcset -->
+    <a href="https://addons.mozilla.org/en-US/firefox/">
+        <img src="firefox-addons.jpg" alt="Firefox Add-ons"
+             srcset="firefox-addons.jpg 120w, firefox-addons400.jpg 400w"
+            sizes="(max-width: 300px) 120px, 400px" >
+    </a>
+
+<!-- Image 3 with responsive srcset -->
+    <a href="https://www.mozilla.org/en-US/about/">
+         <img src="mozilla-dinosaur-head.png" alt="Mozilla Dinosaur Head"
+             srcset="mozilla-dinosaur-head.png 120w, mozilla-dinosaur-head400.png 400w"
+            sizes=" 120px, 400px">
+            
+    </a>
+
+<!-- SVG Image inherently responsive -->
+    <a href="https://developer.mozilla.org/">
+        <img src="mdn.svg" alt="MDN Web Docs"
+        srcset="mdn.svg 120w, mdn400.svg 400w"
+            sizes=" (max-width: 300px) 120px, 400px">
+    </a>
+</section>
+
+<!-- Art-directed red panda with responsive image using <picture> -->
+<section class="red-panda">
+    <h3>Meet the Red Panda</h3>
+    <picture>
+        <source media="(max-width: 600px)" srcset="red-panda-portrait600.jpg">
+        <img src="red-panda.jpg." alt="Red Panda">
+    </picture>
+</section>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

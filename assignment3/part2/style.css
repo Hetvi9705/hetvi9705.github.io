@@ -1,0 +1,57 @@
+/* 
+Name: Hetvi Patel
+File: style.css
+Date: 17 October 2024
+This CSS file contains the styles to create a fancy box.
+*/
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+  }
+
+  .fancy-box {
+    width: 200px;   
+    height: 200px;  
+    background-color: #3498db; 
+    color: #fff;    
+    text-align: center; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    font-size: 1.125rem; 
+    text-shadow: 1px 1px 2px black; 
+    border-radius: 10px; 
+    border: 1px solid #2980b9; 
+    position: relative;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
+  }
+
+  .fancy-box::before, .fancy-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+  }
+
+    .fancy-box::before {
+        box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+      }
+      
+     
+      .fancy-box::after {
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      
+     
+      .fancy-box {
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%), #3498db;
+      }

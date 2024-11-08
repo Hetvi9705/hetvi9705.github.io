@@ -1,0 +1,68 @@
+/* Basic table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the caption */
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* General cell padding and borders */
+th, td {
+    padding: 12px;
+    border: 1px solid #000;
+}
+
+/* Header styling */
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Row grouping headers */
+tbody th[scope="rowgroup"] {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+    border-right: 3px solid #000; /* Emphasizing group headers */
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlighting planet names */
+tbody th[scope="row"] {
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-weight: bold;
+    text-align: left;
+    border-right: 2px solid #000; /* Separate planet names with a bold border */
+}
+
+/* Adjusting column width for better readability */
+td {
+    width: 25%; /* Ensures even width distribution */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    caption {
+        font-size: 1.2em;
+    }
+}

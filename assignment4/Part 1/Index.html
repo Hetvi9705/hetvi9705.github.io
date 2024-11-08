@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Silly Story Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <h1>Silly Story Generator</h1>
+      <label for="customName">Enter custom name:</label>
+      <input type="text" id="customName" placeholder="Enter a name">
+
+      <p>Choose a region:</p>
+      <label for="us">US</label>
+      <input type="radio" id="us" name="region" checked>
+      <label for="uk">UK</label>
+      <input type="radio" id="uk" name="region">
+
+      <button id="randomize">Generate random story</button>
+      <p id="story"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    src: url('path/to/Merriweather-Regular.woff2') format('woff2'),
+         url('path/to/Merriweather-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('path/to/Montserrat-Regular.woff2') format('woff2'),
+         url('path/to/Montserrat-Regular.woff') format('woff');
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 10px; /* Site-wide font size */
+    line-height: 1.5; /* Suitable line height */
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px; /* Space between letters */
+}
+
+h1 {
+    text-align: center; /* Center the top-level heading */
+    font-size: 2.5em; /* Relative size for heading */
+}
+
+h2 {
+    font-size: 2em; /* Relative size for subheadings */
+}
+
+p {
+    letter-spacing: 0.2px; /* Spacing for body text */
+    word-spacing: 0.5px;
+}
+
+section p:first-of-type {
+    text-indent: 20px; /* Indent the first paragraph */
+}
+
+a {
+    color: #1E90FF; /* Link color */
+    text-decoration: underline; /* Underline by default */
+}
+
+a:visited {
+    color: #0000CD; /* Visited link color */
+}
+
+a:hover, a:focus {
+    text-decoration: none; /* Remove underline on hover/focus */
+}
+
+a:active {
+    color: #FF4500; /* Different color for active state */
+    font-weight: bold; /* Bold for active state */
+}
+
+/* External link icon */
+a.external:after {
+    content: url('path/to/external-link-icon.png'); /* Icon next to external links */
+}
+
+/* List styling */
+ul {
+    padding: 0;
+    margin: 20px 0; /* Spacing for lists */
+}
+
+li {
+    line-height: 1.5; /* Same line-height as paragraphs */
+    list-style: disc; /* Custom bullet */
+    padding-left: 20px; /* Space before bullet */
+}
+
+/* Navigation menu styling */
+nav {
+    background-color: #f8f8f8; /* Background color for nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0; /* Space between nav items */
+}
+
+nav a {
+    display: block; /* Make links fill the li */
+    padding: 10px; /* Taller clickable area */
+    border: 1px solid #ddd; /* Border around links */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+nav a:hover {
+    background-color: #e0e0e0; /* Background change on hover */
+}
