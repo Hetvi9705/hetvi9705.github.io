@@ -110,85 +110,20 @@ while (balls.length < 25) {
     size
   );
 
-  draw() {
-    ctx.beginPath();
-    ctx.strokeStyle = this.color;
-    ctx.lineWidth = 3;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.stroke();
+  balls.push(ball);
 }
 
-checkBounds() {
-    if (this.x - this.size < 0) this.x = this.size;
-    if (this.x + this.size > canvas.width) this.x = canvas.width - this.size;
-    if (this.y - this.size < 0) this.y = this.size;
-    if (this.y + this.size > canvas.height) this.y = canvas.height - this.size;
-}
-
-collisionDetect() {
-    for (const ball of balls) {
-        if (ball.exists) {
-            const dx = this.x - ball.x;
-            const dy = this.y - ball.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < this.size + ball.size) {
-                ball.exists = false;
-                ballCount--;
-                ballCountDisplay.textContent = ballCount;
-            }
-        }
-    }
-}
-}
-
-function random(min, max) {
-return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function randomRGB() {
-return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-}
-
-// Create balls
-function createBalls() {
-while (balls.length < 25) {
-    const size = random(10, 20);
-    const ball = new Ball(
-        random(size, canvas.width - size),
-        random(size, canvas.height - size),
-        random(-7, 7),
-        random(-7, 7),
-        size,
-        randomRGB()
-    );
-    balls.push(ball);
-    ballCount++;
-    ballCountDisplay.textContent = ballCount;
-}
-}
-
-const evilCircle = new EvilCircle(random(0, canvas.width), random(0, canvas.height));
-
-// Animation loop
 function loop() {
-ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-for (const ball of balls) {
-    if (ball.exists) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
-    }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
+
+  requestAnimationFrame(loop);
 }
 
-evilCircle.draw();
-evilCircle.checkBounds();
-evilCircle.collisionDetect();
-
-requestAnimationFrame(loop);
-}
-
-createBalls();
 loop();
